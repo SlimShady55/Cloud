@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Облачные технологии — история, виды и применение</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#141a33;
+      --accent:#6cf2c2;
+      --accent2:#7aa2ff;
+      --text:#e8ecff;
+      --muted:#a7b0ff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto;
+      background: radial-gradient(1200px 600px at 10% -10%, #1a2260, transparent),
+                  radial-gradient(1200px 600px at 90% -10%, #0a7c5a, transparent),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    header{
+      position: sticky;top:0;z-index:10;
+      backdrop-filter: blur(12px);
+      background: linear-gradient(180deg, rgba(11,16,32,.9), rgba(11,16,32,.65));
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      max-width:1200px;margin:auto;padding:14px 16px;
+      display:flex;align-items:center;gap:12px;justify-content:space-between;
+    }
+    .logo{font-weight:800;letter-spacing:.4px}
+    .tabs{display:flex;gap:10px;flex-wrap:wrap}
+    .tabs a{
+      text-decoration:none;
+      background:transparent;color:var(--text);
+      border:1px solid rgba(255,255,255,.15);
+      padding:8px 14px;border-radius:999px;cursor:pointer
+    }
+    .tabs a:hover{background:rgba(255,255,255,.08)}
+    .tabs a.active{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#061b16;border-color:transparent}
+    .tabs button.active{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#061b16;border-color:transparent}
+
+    main{max-width:1200px;margin:32px auto;padding:0 16px}
+
+    h1,h2,h3{line-height:1.25}
+    h2{margin-top:0}
+
+    .hero{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center
+    }
+    .hero h1{font-size:clamp(30px,4vw,46px);margin:0 0 14px}
+    .hero p{color:var(--muted);font-size:18px}
+    .hero img{width:100%;border-radius:22px;box-shadow:0 25px 70px rgba(0,0,0,.5)}
+
+    .section{display:block;margin-top:80px}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.01)), var(--card);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:20px;padding:20px
+    }
+    .card h3{margin-top:0}
+    .card p{color:var(--muted)}
+
+    .timeline{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px
+    }
+
+    table{
+      width:100%;border-collapse:collapse;margin-top:16px;font-size:15px
+    }
+    th,td{
+      border:1px solid rgba(255,255,255,.15);
+      padding:12px;vertical-align:top
+    }
+    th{background:rgba(255,255,255,.06)}
+
+    a{color:var(--accent)}
+
+    footer{
+      margin-top:64px;padding:26px 16px;border-top:1px solid rgba(255,255,255,.08);
+      color:var(--muted);text-align:center
+    }
+
+    @keyframes fade{from{opacity:.6;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      header{position: static;}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="logo">☁️ Облачные технологии</div>
+    <div class="tabs">
+      <a href="#home" class="active">Главная</a>
+      <a href="#history">История</a>
+      <a href="#types">Виды</a>
+      <a href="#uses">Применение</a>
+      <a href="#providers">Провайдеры</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section id="home" class="section">
+    <div class="hero">
+      <div>
+        <h1>Облачные технологии</h1>
+        <p>
+          Облачные технологии — это современная модель предоставления вычислительных ресурсов
+          через интернет. Пользователи получают доступ к серверам, хранилищам данных,
+          базам данных, сетям и программному обеспечению без необходимости покупать
+          и обслуживать собственное оборудование.
+        </p>
+        <p>
+          Основная идея облачных технологий заключается в том, что вычислительные мощности
+          предоставляются как услуга. Это означает, что ресурсы можно быстро получить,
+          масштабировать или отключить в зависимости от текущих потребностей.
+        </p>
+        <p>
+          Сегодня облака являются основой цифровой экономики. Большинство популярных сервисов,
+          таких как социальные сети, видеохостинги, онлайн-магазины и игровые платформы,
+          работают именно на облачной инфраструктуре.
+        </p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&auto=format&fit=crop" alt="Центр обработки данных">
+    </div>
+  </section>
+
+  <!-- HISTORY -->
+  <section id="history" class="section">
+    <h2>История развития облачных технологий</h2>
+    <p>
+      История облачных технологий насчитывает несколько десятилетий и тесно связана
+      с развитием вычислительной техники и интернета. Идея удалённого доступа к ресурсам
+      появилась задолго до появления современных облаков.
+    </p>
+    <div class="timeline">
+      <div class="card"><h3>1960–1980-е</h3><p>Появляются мейнфреймы и терминалы. Пользователи подключаются к одному мощному компьютеру и делят его ресурсы.</p></div>
+      <div class="card"><h3>1990-е</h3><p>Быстрое развитие интернета и веб-технологий. Формируются предпосылки для онлайн-сервисов и виртуализации.</p></div>
+      <div class="card"><h3>2000–2006</h3><p>Компании начинают предоставлять ИТ-ресурсы по модели услуги. Запуск Amazon Web Services становится переломным моментом.</p></div>
+      <div class="card"><h3>2010-е</h3><p>Массовое внедрение облаков в бизнес и образование. Развиваются SaaS, PaaS и IaaS.</p></div>
+      <div class="card"><h3>2020-е</h3><p>Облака используются для искусственного интеллекта, больших данных, интернета вещей и глобальных цифровых платформ.</p></div>
+    </div>
+    <img style="margin-top:24px;width:100%;border-radius:20px" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop" alt="История серверов">
+  </section>
+
+  <!-- TYPES -->
+  <section id="types" class="section">
+    <h2>Виды облачных технологий</h2>
+    <p>
+      Облачные технологии делятся на несколько видов в зависимости от того,
+      кому принадлежит инфраструктура и как именно она используется.
+      Такой подход позволяет выбрать оптимальное решение под конкретные задачи.
+    </p>
+    <div class="grid">
+      <div class="card"><h3>Публичное облако</h3><p>Инфраструктура принадлежит провайдеру и используется множеством клиентов. Отличается низкой стоимостью и высокой масштабируемостью.</p></div>
+      <div class="card"><h3>Частное облако</h3><p>Создаётся для одной организации. Обеспечивает высокий уровень безопасности и полный контроль над данными.</p></div>
+      <div class="card"><h3>Гибридное облако</h3><p>Объединяет публичное и частное облако. Позволяет хранить важные данные локально, а нагрузку выносить в публичное облако.</p></div>
+    </div>
+    <h3 style="margin-top:32px">Сравнительная таблица</h3>
+    <table>
+      <tr><th>Тип</th><th>Особенности</th><th>Где используется</th></tr>
+      <tr><td>Публичное</td><td>Доступ через интернет</td><td>Сайты, мобильные приложения</td></tr>
+      <tr><td>Частное</td><td>Максимальная защита</td><td>Банки, государственные организации</td></tr>
+      <tr><td>Гибридное</td><td>Комбинация моделей</td><td>Крупный бизнес и корпорации</td></tr>
+    </table>
+    <img style="margin-top:24px;width:100%;border-radius:20px" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop" alt="Облачная архитектура">
+  </section>
+
+  <!-- USES -->
+  <section id="uses" class="section">
+    <h2>Применение облачных технологий</h2>
+    <p>
+      Облачные технологии используются практически во всех сферах современной жизни.
+      Они упрощают работу с данными, ускоряют процессы и позволяют внедрять новые цифровые решения.
+    </p>
+    <div class="grid">
+      <div class="card"><h3>Бизнес</h3><p>Хранение данных, онлайн-сервисы, автоматизация бизнес-процессов, аналитика.</p></div>
+      <div class="card"><h3>Образование</h3><p>Дистанционное обучение, виртуальные классы, совместная работа над проектами.</p></div>
+      <div class="card"><h3>Здравоохранение</h3><p>Электронные медицинские карты, телемедицина, анализ медицинских данных.</p></div>
+      <div class="card"><h3>Государство</h3><p>Порталы госуслуг, электронный документооборот, цифровые реестры.</p></div>
+      <div class="card"><h3>Развлечения</h3><p>Онлайн-кинотеатры, стриминг музыки, облачные игры.</p></div>
+      <div class="card"><h3>Наука и ИИ</h3><p>Обработка больших данных, моделирование, машинное обучение.</p></div>
+    </div>
+    
+  </section>
+
+  <!-- PROVIDERS -->
+  <section id="providers" class="section">
+    <h2>Крупнейшие облачные провайдеры</h2>
+    <table>
+      <tr><th>Компания</th><th>Платформа</th><th>Особенности</th></tr>
+      <tr><td>Amazon</td><td>AWS</td><td>Крупнейший рынок, сотни сервисов</td></tr>
+      <tr><td>Microsoft</td><td>Azure</td><td>Интеграция с Windows и Office</td></tr>
+      <tr><td>Google</td><td>Google Cloud</td><td>Big Data, ИИ и машинное обучение</td></tr>
+      <tr><td>Alibaba</td><td>Alibaba Cloud</td><td>Лидер азиатского рынка</td></tr>
+    </table>
+
+    
+  </section>
+</main>
+
+
+
+<script>
+  // Плавная прокрутка
+  document.querySelectorAll('.tabs a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const id = link.getAttribute('href').substring(1);
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+      document.querySelectorAll('.tabs a').forEach(a=>a.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
